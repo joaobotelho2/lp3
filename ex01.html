@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function dobrarNumero() {
+            try {
+                let entrada = prompt("Digite um número: ")
+                if (isNaN(entrada)) {
+                    throw new Error("Valor inválido! Você deve digitar um número."); 
+                }
+                let numero = Number(entrada);
+                alert("O dobro do número é: " + (numero * 2));
+            } catch (erro) {
+                alert("Erro: " + erro.message);
+            }
+        }
+
+        dobrarNumero();
+    </script>
+</body>
+</html>
